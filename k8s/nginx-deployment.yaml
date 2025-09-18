@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
       - name: my-apps
-        image: techdocker24/zomato
+        image: techdocker24/html
         ports:
-        - containerPort: 3000
+        - containerPort: 80
 
 ---
 
@@ -32,5 +32,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 3000
+      targetPort: 80
   type: ClusterIP
