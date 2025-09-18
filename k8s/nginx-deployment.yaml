@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: my-apps
-        image: techdocker24/node
+        image: techdocker24/node-app
         ports:
         - containerPort: 3000
 
