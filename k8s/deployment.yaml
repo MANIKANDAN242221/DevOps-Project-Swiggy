@@ -16,6 +16,7 @@ spec:
       containers:
       - name: my-app
         image: techdocker24/swiggy
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
 
