@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: techdocker24/swiggy
+        image: 838220668019.dkr.ecr.ap-south-1.amazonaws.com/eks-repo:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
