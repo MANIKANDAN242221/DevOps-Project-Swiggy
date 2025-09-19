@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: my-apps
-        image: nginx:latest
+        image: techdocker24/html
         imagePullPolicy: Always
         ports:
         - containerPort: 80
