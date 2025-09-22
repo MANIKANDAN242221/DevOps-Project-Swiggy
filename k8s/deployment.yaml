@@ -1,37 +1,41 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app
+  name: swiggy-deployment
   namespace: default
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: my-app
+      app: swiggy
   template:
     metadata:
       labels:
-        app: my-app
+        app: swiggy
     spec:
       containers:
-      - name: my-app
-        image: 838220668019.dkr.ecr.ap-south-1.amazonaws.com/eks-repo:latest
+      - name: swiggy-container
+        image: 838220668019.dkr.ecr.ap-south-1.amazonaws.com/eks-cluster-repo/swiggy:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
-
+        envFrom:
+          - configMapRef:
+              name: swiggy-config
+          - secretRef:
+              name: swiggy-secret
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-app
-  namespace: default
+  name: swiggy-service
+  namespace: swiggy
 spec:
   selector:
-    app: my-app
+    app: swiggy
   ports:
     - protocol: TCP
       port: 80
       targetPort: 3000
   type: ClusterIP
+
