@@ -4,7 +4,6 @@ metadata:
   name: swiggy-ingress
   namespace: swiggy
   annotations:
-    kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
@@ -17,6 +16,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: swiggy
+                name: swiggy-service
                 port:
                   number: 80
