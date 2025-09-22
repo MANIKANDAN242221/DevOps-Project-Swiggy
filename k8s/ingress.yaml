@@ -17,6 +17,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: swiggy-service
+                name: swiggy
                 port:
                   number: 80
