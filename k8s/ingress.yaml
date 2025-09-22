@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: my-app-ingress
-  namespace: default
+  name: swiggy-ingress
+  namespace: swiggy
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
@@ -17,13 +17,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: my-app
-                port:
-                  number: 80
-          - path: /app1
-            pathType: Prefix
-            backend:
-              service:
-                name: my-apps
+                name: swiggy-service
                 port:
                   number: 80
