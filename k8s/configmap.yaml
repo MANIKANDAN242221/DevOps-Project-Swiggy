@@ -7,7 +7,7 @@ data:
   IMAGE_NAME: swiggy
   IMAGE_TAG: latest
   AWS_REGION: ap-south-1
-  ECR_REPO: 838220668019.dkr.ecr.ap-south-1.amazonaws.com/eks-cluster-repo
+  ECR_REPO: 951042686423.dkr.ecr.ap-south-1.amazonaws.com/eks-cluster-repo
   K8S_NAMESPACE: swiggy
   K8S_DEPLOYMENT_NAME: swiggy-deployment
   K8S_CONTAINER_NAME: swiggy-container
