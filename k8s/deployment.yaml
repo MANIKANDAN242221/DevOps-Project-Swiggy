@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: swiggy-container
-        image: 951042686423.dkr.ecr.ap-south-1.amazonaws.com/eks-cluster-repo/swiggy:latest
+        image: 156172784219.dkr.ecr.us-east-1.amazonaws.com/eks-cluster-repo/swiggy:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
